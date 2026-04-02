@@ -54,10 +54,27 @@ You are running an automated daily sync for Vamsi's brain system at ~/Coding/vam
 6. Update "Last Sync" to today's date.
 7. If any open action items from previous syncs appear resolved (based on follow-up messages), update their status to "done".
 
-## Step 3: Commit
+## Step 3: Linear Sync
+
+1. Read `~/Coding/vamsios/brain/sync/linear-log.md` to get the current ticket state.
+2. Pull Vamsi's active issues:
+   - `mcp__claude_ai_Linear__list_issues` with `assignee: "me"`, `state: "started"`, `limit: 50`
+   - Also check `state: "unstarted"` for backlog items that may have been prioritized
+3. Compare with previous sync state:
+   - New issues not in the log → add to appropriate status section
+   - Issues that changed status → add to "Status Changes" table with from/to
+   - Issues that moved to Done/Cancelled → remove from active, note in status changes
+4. Watch for:
+   - Issues created by Kyra or Mike (likely important asks)
+   - Issues in "Meta MCP Launch" project (core product)
+   - Blocked issues or issues with no recent updates (may need attention)
+5. Update "Last Sync" to today's date.
+6. Add a row to "Sync History" with active count and change count.
+
+## Step 4: Commit
 
 1. `cd ~/Coding/vamsios`
-2. `git add brain/sync/roam-log.md brain/sync/slack-log.md`
+2. `git add brain/sync/roam-log.md brain/sync/slack-log.md brain/sync/linear-log.md`
 3. `git commit -m "sync: daily brain sync YYYY-MM-DD"`
 4. Do NOT push.
 

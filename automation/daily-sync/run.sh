@@ -22,7 +22,7 @@ PROMPT=$(cat "$PROMPT_FILE")
 
 # Run claude headlessly with the sync prompt
 claude -p "$PROMPT" \
-  --allowedTools "mcp__roam__list_meetings,mcp__roam__get_meeting,mcp__claude_ai_Slack__slack_search_public_and_private,Read,Edit,Bash" \
+  --allowedTools "mcp__roam__list_meetings,mcp__roam__get_meeting,mcp__claude_ai_Slack__slack_search_public_and_private,mcp__claude_ai_Linear__list_issues,mcp__claude_ai_Linear__get_issue,Read,Edit,Bash" \
   -d "$REPO_DIR" \
   --no-input \
   >> "$LOG_FILE" 2>&1
