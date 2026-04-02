@@ -71,10 +71,19 @@ You are running an automated daily sync for Vamsi's brain system at ~/Coding/vam
 5. Update "Last Sync" to today's date.
 6. Add a row to "Sync History" with active count and change count.
 
-## Step 4: Commit
+## Step 4: Calendar Sync (via Roam)
+
+1. Call `mcp__roam__list_calendar_events` with `startDate` = tomorrow (YYYY-MM-DD) and `endDate` = day after tomorrow.
+2. Create or update `~/Coding/vamsios/brain/sync/calendar-tomorrow.md` with:
+   - Each meeting: time, title, attendees (names only), location/link
+   - Flag meetings with key people (Kyra, Maya, Mike, Armin, Reza, Evan)
+   - Note prep suggestions: if a meeting involves people from active Linear tickets or recent Slack threads, mention the context
+3. This file is overwritten each sync (not cumulative - just tomorrow's view).
+
+## Step 5: Commit
 
 1. `cd ~/Coding/vamsios`
-2. `git add brain/sync/roam-log.md brain/sync/slack-log.md brain/sync/linear-log.md`
+2. `git add brain/sync/roam-log.md brain/sync/slack-log.md brain/sync/linear-log.md brain/sync/calendar-tomorrow.md`
 3. `git commit -m "sync: daily brain sync YYYY-MM-DD"`
 4. Do NOT push.
 
