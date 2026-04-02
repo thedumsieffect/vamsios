@@ -3,12 +3,18 @@
 Tracks processed meetings to prevent reprocessing. Updated by daily sync pipeline.
 
 ## Last Sync
-2026-03-30
+2026-04-02
 
 ## Processed Meetings
 
 | Date | Meeting ID | Participants | Topics | Depth |
 |------|-----------|-------------|--------|-------|
+| 2026-04-01 | 56926ddd-b515-490d-bc7e-0636ce4dd83e | Vamsi, Kyra, Armin, +10 | DI deployment, API v3 endpoints, PR reviews, standup | Summary + chapters |
+| 2026-04-01 | 1c04102c-bff5-47c8-bcb0-f7375dc5e680 | Vamsi, Kyra, Evan, Maya, Jose, Reza | MCP monetization rollout, pricing tiers, agency access, INSPO legal | Summary + chapters |
+| 2026-03-31 | 2eb20f16-5425-44ac-bc48-7532d93e13d9 | Vamsi, Armin, Alex, Mike, +7 | Database stability, Azure Key Vault outage, boot camp readiness, MongoDB read preferences | Summary + chapters |
+| 2026-03-31 | 9dfd8749-158a-4597-9283-7b0ea566b5f2 | Vamsi, Alysha | Plugin installation debugging, workspace setup, dashboard customization, MCP onboarding | Summary + chapters |
+| 2026-03-30 | e422a5c6-04d7-4d21-8cdd-cfa104c58dba | Vamsi, Kyra, Maya | MCP launch prep, all-hands demo planning, Mixpanel event tracking | Summary + chapters |
+| 2026-03-30 | e8f5f7f4-f683-4e3b-a018-e7002139b3ab | Vamsi, Kyra, Armin, +10 | Platform standup, API scaffolding, DI timing, ES insights rollout | Summary + chapters |
 | 2026-03-26 | 16240ca7-3703-45ba-8a9c-cb982fda13a5 | Vamsi, Kyra | Cache bug, skills consolidation, presentation feedback | Full transcript |
 | 2026-03-26 | 87840210-5cf5-424f-b5e9-fec8775efee5 | Vamsi, Kyra | MCP onboarding rollout, 5 brands Tuesday, narrative prep | Full transcript |
 | 2026-03-26 | da4607b0-954f-4210-afde-6e97483ac8de | Vamsi, Kyra | Plugin creation, skills integration, naming conventions | Summary only |
