@@ -13,18 +13,46 @@ You are running an automated daily sync for Vamsi's brain system at ~/Coding/vam
 ## Step 2: Slack Sync
 
 1. Read `~/Coding/vamsios/brain/sync/slack-log.md` to get the "Last Sync" date.
-2. Search Slack for messages involving Vamsi since that date:
-   - `mcp__claude_ai_Slack__slack_search_public_and_private` with query `to:me after:YYYY-MM-DD` (exclude bot messages)
-   - `mcp__claude_ai_Slack__slack_search_public_and_private` with query `from:me after:YYYY-MM-DD`
-   - Focus on human conversations in channels and DMs. Skip GitHub bot, deploy bots, and automated notifications.
+
+2. Search Slack using `mcp__claude_ai_Slack__slack_search_public_and_private` with these queries (all with `after:YYYY-MM-DD` of last sync):
+
+   **Core product channels (always scan):**
+   - `in:#project-cli after:YYYY-MM-DD` — MCP product channel
+   - `in:#project-mcp after:YYYY-MM-DD` — MCP work
+   - `in:#stream-mcp after:YYYY-MM-DD` — MCP stream
+   - `in:#mcp-feedback after:YYYY-MM-DD` — Customer feedback
+
+   **High-priority channels (scan for mentions + decisions):**
+   - `in:#engineering @Vamsi after:YYYY-MM-DD` — Incidents, releases
+   - `in:#project-chat after:YYYY-MM-DD` — Cross-product decisions
+   - `in:#project-analytics after:YYYY-MM-DD` — Metrics work
+
+   **DMs & Group DMs (scan for action items):**
+   - `to:me after:YYYY-MM-DD` in DMs/group DMs — Direct asks
+   - `from:me after:YYYY-MM-DD` in DMs/group DMs — Check for commitments Vamsi made
+
+   **Key people to watch for asks from:**
+   - Kyra Richards (PM lead)
+   - Maya (PM partner)
+   - Mike Choi (engineering partner)
+   - Armin Karimi (eng lead)
+
+   Skip: GitHub bot, deploy bots, automated notifications, #working-with-ai (social), casual emoji-only messages.
+
 3. For each relevant message thread, classify as:
-   - **Action Item**: something Vamsi needs to do, or was asked to do. Add to "Open Action Items" with status "open".
-   - **Decision**: a decision was made that affects Vamsi's work. Add to "Decisions".
-   - **Ask/Request**: someone asked Vamsi for something. Add to "Asks & Requests" with whether he responded (yes/no/pending).
-4. Skip casual chat, emoji reactions, and FYI-only messages unless they contain a clear commitment or deliverable.
+   - **Action Item**: something Vamsi needs to do, was asked to do, or committed to doing. Add to "Open Action Items" with status "open".
+   - **Decision**: a decision was made that affects Vamsi's work or MCP product. Add to "Decisions".
+   - **Ask/Request**: someone asked Vamsi for something specific. Add to "Asks & Requests" with whether he responded (yes/no/pending).
+
+4. Prioritization rules:
+   - Anything from Kyra, Maya, or Mike directed at Vamsi = always capture
+   - Customer feedback in #mcp-feedback = always capture
+   - Engineering incidents or blockers = capture if MCP-related
+   - Casual chat, reactions, GIFs, social messages = skip
+
 5. Add a row to "Sync History" with today's date, messages scanned count, items extracted count.
 6. Update "Last Sync" to today's date.
-7. If any open action items from previous syncs appear to be resolved (based on follow-up messages), update their status to "done".
+7. If any open action items from previous syncs appear resolved (based on follow-up messages), update their status to "done".
 
 ## Step 3: Commit
 
