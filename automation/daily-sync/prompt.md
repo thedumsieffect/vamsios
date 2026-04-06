@@ -14,22 +14,22 @@ You are running an automated daily sync for Vamsi's brain system at ~/Coding/vam
 
 1. Read `~/Coding/vamsios/brain/sync/slack-log.md` to get the "Last Sync" date.
 
-2. Search Slack using `mcp__claude_ai_Slack__slack_search_public_and_private` with these queries (all with `after:YYYY-MM-DD` of last sync):
+2. Search Slack using `mcp__claude_ai_Slack__slack_search_public_and_private` with these queries. Use `on:YYYY-MM-DD` for today's date to capture the full day. If last sync was more than 1 day ago, also run queries with `after:YYYY-MM-DD` for the last sync date to catch anything in between.
 
    **Core product channels (always scan):**
-   - `in:#project-cli after:YYYY-MM-DD` — MCP product channel
-   - `in:#project-mcp after:YYYY-MM-DD` — MCP work
-   - `in:#stream-mcp after:YYYY-MM-DD` — MCP stream
-   - `in:#mcp-feedback after:YYYY-MM-DD` — Customer feedback
+   - `in:#project-cli on:YYYY-MM-DD` — MCP product channel
+   - `in:#project-mcp on:YYYY-MM-DD` — MCP work
+   - `in:#stream-mcp on:YYYY-MM-DD` — MCP stream
+   - `in:#mcp-feedback on:YYYY-MM-DD` — Customer feedback
 
    **High-priority channels (scan for mentions + decisions):**
-   - `in:#engineering @Vamsi after:YYYY-MM-DD` — Incidents, releases
-   - `in:#project-chat after:YYYY-MM-DD` — Cross-product decisions
-   - `in:#project-analytics after:YYYY-MM-DD` — Metrics work
+   - `in:#engineering on:YYYY-MM-DD` — Incidents, releases
+   - `in:#project-chat on:YYYY-MM-DD` — Cross-product decisions
+   - `in:#project-analytics on:YYYY-MM-DD` — Metrics work
 
    **DMs & Group DMs (scan for action items):**
-   - `to:me after:YYYY-MM-DD` in DMs/group DMs — Direct asks
-   - `from:me after:YYYY-MM-DD` in DMs/group DMs — Check for commitments Vamsi made
+   - `to:me on:YYYY-MM-DD` in DMs/group DMs — Direct asks
+   - `from:me on:YYYY-MM-DD` in DMs/group DMs — Check for commitments Vamsi made
 
    **Key people to watch for asks from:**
    - Kyra Richards (PM lead)
