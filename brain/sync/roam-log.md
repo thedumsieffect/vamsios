@@ -9,6 +9,8 @@ Tracks processed meetings to prevent reprocessing. Updated by daily sync pipelin
 
 | Date | Meeting ID | Participants | Topics | Depth |
 |------|-----------|-------------|--------|-------|
+| 2026-04-06 | da162b45-e17a-44f4-969d-6d72c176c0d9 | Vamsi, Kyra, Maya, Mike, Itay, Sam, Ali, PK, Rui | Ali ad comments edge cases, Rui async reports ES→Mongo, Itay stability PR, Mike MCP release + scaling + Datadog, Sam keyboard permissions + builder Roam, PK performance state filters, performance tagging alpha discussion | Summary + chapters |
+| 2026-04-06 | 5bfe2a93-66fb-436e-93b0-d8eac64845a2 | Vamsi, Kyra, Maya | Vamsi MCP Linear views + GR prioritization, Maya support volume reduction + MCP events + attribution window + partner share, aggressive SLA ticket closure (90%+ goal), stability project kickoffs | Summary + chapters |
 | 2026-04-03 | 0458fa55-b8e8-460f-9460-55068a0083e9 | Vamsi, Kyra | MCP full ownership shift to Vamsi, Maya → support, agency access gating, feature flags at billing level, eval methodology, engagement/travel plans, MCP GA as perf milestone | Summary + chapters |
 | 2026-04-03 | abf575c4-2f84-4431-9851-6904f567831f | Vamsi, Kyra, Bartosz, David | ES missing data investigation, CRCA shard planning, Builder release, "on pause" board column, Insights v2 scoping | Summary + chapters |
 | 2026-04-02 | 0dd1f49f-7721-492b-97e4-57d12a5fc528 | Vamsi, Kyra, Maya, Armin, Ioana, Alex | Alert → admin request with SLA, root cause analysis for all admin reqs, Maya owns accountability, written retros (SOC 2), Datadog MCP, stability week planning | Summary + chapters |
