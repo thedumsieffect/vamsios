@@ -3,12 +3,15 @@
 Tracks processed meetings to prevent reprocessing. Updated by daily sync pipeline.
 
 ## Last Sync
-2026-04-02
+2026-04-06
 
 ## Processed Meetings
 
 | Date | Meeting ID | Participants | Topics | Depth |
 |------|-----------|-------------|--------|-------|
+| 2026-04-03 | 0458fa55-b8e8-460f-9460-55068a0083e9 | Vamsi, Kyra | MCP full ownership shift to Vamsi, Maya → support, agency access gating, feature flags at billing level, eval methodology, engagement/travel plans, MCP GA as perf milestone | Summary + chapters |
+| 2026-04-03 | abf575c4-2f84-4431-9851-6904f567831f | Vamsi, Kyra, Bartosz, David | ES missing data investigation, CRCA shard planning, Builder release, "on pause" board column, Insights v2 scoping | Summary + chapters |
+| 2026-04-02 | 0dd1f49f-7721-492b-97e4-57d12a5fc528 | Vamsi, Kyra, Maya, Armin, Ioana, Alex | Alert → admin request with SLA, root cause analysis for all admin reqs, Maya owns accountability, written retros (SOC 2), Datadog MCP, stability week planning | Summary + chapters |
 | 2026-04-01 | 56926ddd-b515-490d-bc7e-0636ce4dd83e | Vamsi, Kyra, Armin, +10 | DI deployment, API v3 endpoints, PR reviews, standup | Summary + chapters |
 | 2026-04-01 | 1c04102c-bff5-47c8-bcb0-f7375dc5e680 | Vamsi, Kyra, Evan, Maya, Jose, Reza | MCP monetization rollout, pricing tiers, agency access, INSPO legal | Summary + chapters |
 | 2026-03-31 | 2eb20f16-5425-44ac-bc48-7532d93e13d9 | Vamsi, Armin, Alex, Mike, +7 | Database stability, Azure Key Vault outage, boot camp readiness, MongoDB read preferences | Summary + chapters |
