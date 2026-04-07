@@ -5,11 +5,21 @@ Tracks action items, decisions, and asks extracted from Slack DMs and channels. 
 ## Last Sync
 2026-04-07
 
+## Group DM Registry
+
+| Channel ID | Participants | Last Active | Nickname |
+|-----------|-------------|-------------|----------|
+| — | Armin, Itay, Mike | 2026-04-06 | Eng GDM |
+| — | Vishaal, Jose, Fábio | 2026-04-06 | MCP Gating GDM |
+| — | Kyra, Maya | 2026-04-06 | PM GDM |
+
+_Note: Channel IDs to be populated on next direct read._
+
 ## Open Action Items
 
 | Date | From | Channel/DM | Item | Status |
 |------|------|------------|------|--------|
-| 2026-04-07 | Kyra | DM | Share evals with Reza — Kyra asked Apr 6 7:37pm, Vamsi said "yes let me grab them" | open |
+| 2026-04-06 | Kyra | DM | Week goal: Get MCP to general release + keep Kyra proactively aware of progress/blockers | open |
 | 2026-04-06 | Kyra | DM | Week goal: Get MCP to general release + keep Kyra proactively aware of progress/blockers | open |
 | 2026-04-06 | Maya | GDM: Kyra, Maya | Maya asked Kyra to set up Datadog MCP for Claude (not admin) — may involve Vamsi later | watch |
 | 2026-04-06 | Jose | DM | Jose may need a Loom walkthrough for visual-learner clients — Vamsi sent screenshots + text instructions, check if that was sufficient | watch |
@@ -19,11 +29,28 @@ Tracks action items, decisions, and asks extracted from Slack DMs and channels. 
 | 2026-04-07 | Quinn | #admin-requests | PDEC-5391: After sending AI chat, need to refresh to send another. Loom attached. Low-pri admin request — could affect copilot/MCP UX | watch |
 | 2026-04-06 | self | GDM: Vishaal, Jose, Fábio | LD gating: 3 access states designed (available / gated-upgrade / hidden). Sales-led flag flip for upgrades. Now in implementation (PDEC-5377/5378) | open |
 
+## Waiting On Others
+
+| Date | Who | What | Last Checked | Status |
+|------|-----|------|-------------|--------|
+| 2026-04-06 | Mike | Datadog MCP monitors sync (PDEC-5362) | 2026-04-07 | waiting — ask in standup |
+| 2026-04-06 | Ioana/Lukasz | Custom conversions hallucination fix in Runneth (could affect MCP) | 2026-04-07 | watching |
+
+## Commitments I Made
+
+| Date | To | Channel/DM | Commitment | Delivered | Verified |
+|------|-----|-----------|------------|-----------|----------|
+| 2026-04-06 | Kyra | DM | Compile Anthropic approval answers in Notion doc | pending | meeting scheduled Apr 8 noon |
+| 2026-04-06 | Reza | DM (via Kyra) | Share evals | yes | Verified — sent shippedbyvamsi.lol/v6eval, Reza replied "nice very cool" |
+| 2026-04-06 | Jose | DM | Send MCP setup instructions + plugin zip | yes | Verified — sent text instructions + screenshots + zip |
+| 2026-04-06 | Fábio | GDM | Define LD gating access states | yes | Verified — 3 states designed, now in implementation (PDEC-5377/5378) |
+
 ## Resolved Action Items (Apr 6–7)
 
 | Date | From | Item | Resolution |
 |------|------|------|------------|
 | 2026-04-07 | Kyra | Respond to Monday DM — acknowledge new meetings + jet lag question | Done. Vamsi replied Apr 6 12:28pm with full week plan + acknowledged new cadence |
+| 2026-04-07 | Kyra | Share evals with Reza | Done. Sent Apr 6 8:23pm via shippedbyvamsi.lol/v6eval. Reza acknowledged |
 | 2026-04-07 | Jose | Flag additional alpha orgs (3 more: pierre@beainibrands, 62dee5..., 68ee61...) | Done. Vamsi flagged all three evening Apr 6 |
 | 2026-04-03 | Mike | Run evals and have ready for Monday 9am | Done. Mike merged to main, Vamsi ran evals — oauth works, evals passing |
 | 2026-04-06 | Mike | Mike updating branch to point towards main | Done. Merged, deployed, released (r783 + r784) |
@@ -43,7 +70,7 @@ Tracks action items, decisions, and asks extracted from Slack DMs and channels. 
 |------|------|------------|-----|-----------|
 | 2026-04-06 | Jose | DM | Send setup process + Loom for MCP onboarding | yes — sent text instructions + plugin steps + screenshots |
 | 2026-04-06 | Giselle | DM | Move tomorrow's evals meeting — standup always runs long | yes — moved to 1pm Eastern |
-| 2026-04-06 | Kyra | DM | Share evals with Reza | pending — said "yes let me grab them" but unclear if sent |
+| 2026-04-06 | Kyra | DM | Share evals with Reza | yes — sent Apr 6 8:23pm via shippedbyvamsi.lol/v6eval, Reza replied "nice very cool" |
 | 2026-04-04 | Maya | #engineering-platform | Asked about ES sync delay impact on MCP data + customer workarounds | Rui replied: no customers affected, just slower big report loads |
 | 2026-04-03 | Kyra | #engineering-platform | Review cursor PR #7816 (Intercom bug) + cut release before weekend | unknown |
 
