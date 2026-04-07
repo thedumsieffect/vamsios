@@ -9,18 +9,22 @@ Tracks action items, decisions, and asks extracted from Slack DMs and channels. 
 
 | Date | From | Channel/DM | Item | Status |
 |------|------|------------|------|--------|
-| 2026-04-06 | Kyra | DM | Respond to Monday DM — acknowledge new meetings + jet lag question | open |
+| 2026-04-07 | Kyra | DM | Share evals with Reza — Kyra asked Apr 6 7:37pm, Vamsi said "yes let me grab them" | open |
 | 2026-04-06 | Kyra | DM | Week goal: Get MCP to general release + keep Kyra proactively aware of progress/blockers | open |
 | 2026-04-06 | Maya | GDM: Kyra, Maya | Maya asked Kyra to set up Datadog MCP for Claude (not admin) — may involve Vamsi later | watch |
 | 2026-04-06 | Jose | DM | Jose may need a Loom walkthrough for visual-learner clients — Vamsi sent screenshots + text instructions, check if that was sufficient | watch |
 | 2026-04-06 | self | #project-cli | Alpha orgs flagged in. Monitor for client issues once they start connecting | open |
 | 2026-04-06 | Mike | GDM: Armin, Itay, Mike | fb-user bug fix shipped (users without fb user were blocked from data). False positive confirmed. Watch for regressions | watch |
-| 2026-04-06 | self | GDM: Vishaal, Jose, Fábio | LD gating: 3 access states designed (available / gated-upgrade / hidden). Sales-led flag flip for upgrades. Needs implementation | open |
+| 2026-04-07 | Jose | #team-runneth | MCP custom conversions hallucination — agent says it doesn't have access even when told. Lukasz says ongoing issue tracked, cc'd Ioana. Could affect Motion MCP too | watch |
+| 2026-04-07 | Quinn | #admin-requests | PDEC-5391: After sending AI chat, need to refresh to send another. Loom attached. Low-pri admin request — could affect copilot/MCP UX | watch |
+| 2026-04-06 | self | GDM: Vishaal, Jose, Fábio | LD gating: 3 access states designed (available / gated-upgrade / hidden). Sales-led flag flip for upgrades. Now in implementation (PDEC-5377/5378) | open |
 
-## Resolved Action Items (Apr 6)
+## Resolved Action Items (Apr 6–7)
 
 | Date | From | Item | Resolution |
 |------|------|------|------------|
+| 2026-04-07 | Kyra | Respond to Monday DM — acknowledge new meetings + jet lag question | Done. Vamsi replied Apr 6 12:28pm with full week plan + acknowledged new cadence |
+| 2026-04-07 | Jose | Flag additional alpha orgs (3 more: pierre@beainibrands, 62dee5..., 68ee61...) | Done. Vamsi flagged all three evening Apr 6 |
 | 2026-04-03 | Mike | Run evals and have ready for Monday 9am | Done. Mike merged to main, Vamsi ran evals — oauth works, evals passing |
 | 2026-04-06 | Mike | Mike updating branch to point towards main | Done. Merged, deployed, released (r783 + r784) |
 | 2026-04-01 | Kyra | Run evals after Mike merges V3 endpoint PRs | Done. V3 merged, evals ran successfully, orgs flagged in |
@@ -39,9 +43,30 @@ Tracks action items, decisions, and asks extracted from Slack DMs and channels. 
 |------|------|------------|-----|-----------|
 | 2026-04-06 | Jose | DM | Send setup process + Loom for MCP onboarding | yes — sent text instructions + plugin steps + screenshots |
 | 2026-04-06 | Giselle | DM | Move tomorrow's evals meeting — standup always runs long | yes — moved to 1pm Eastern |
-| 2026-04-06 | Kyra | DM | How's the jet lag? + acknowledge new meetings | pending |
+| 2026-04-06 | Kyra | DM | Share evals with Reza | pending — said "yes let me grab them" but unclear if sent |
 | 2026-04-04 | Maya | #engineering-platform | Asked about ES sync delay impact on MCP data + customer workarounds | Rui replied: no customers affected, just slower big report loads |
 | 2026-04-03 | Kyra | #engineering-platform | Review cursor PR #7816 (Intercom bug) + cut release before weekend | unknown |
+
+## Key Channel Activity (Apr 7)
+
+### #admin-requests
+- PDEC-5391 filed by Quinn: AI chat requires page refresh after sending — Loom attached. Low-pri.
+- Fábio working on CR board migration (LOF workspace) — not MCP-related
+- Rui fixed report loading issue (YouTube ad processing edge case). Maya asked for root cause + prevention notes
+- Monstache deployed to staging
+
+### #team-runneth (Jose active late night)
+- Jose flagged: Runneth hallucinating it doesn't have custom conversions access even when explicitly told. Lukasz says ongoing issue tracked, Ioana cc'd
+- Jose reported JSON schema rendering bug in Runneth — Roberto pushed fix (agent-builder PR #1591), Lukasz will review tomorrow
+- Jose got Runneth working on Alysha's workspace after some prompting
+
+### #ask-analyst
+- Alysha tested Analyst bot on campaign analysis — found ad with no tags that can't be analyzed, planning admin request
+- Jose suggested hooking Analyst with Motion MCP/CLI to Reza — adoption signal
+- Reza asked Jose to investigate where Runneth got campaign data wrong
+
+### #engineering
+- motion-ops bot flagged failing e2e tests overnight
 
 ## Key Channel Activity (Apr 6)
 
@@ -79,7 +104,7 @@ Tracks action items, decisions, and asks extracted from Slack DMs and channels. 
 
 | Date | Messages Scanned | Items Extracted | Notes |
 |------|-----------------|-----------------|-------|
-| 2026-04-07 | ~30 | 0 | Quiet day. All DM traffic was GitHub/Calendar/Linear bots. No human messages in core channels. No new action items. |
+| 2026-04-07 | ~80 | 6 | Deeper sweep: Kyra jet lag DM resolved, evals-for-Reza still pending, 3 more alpha orgs flagged, Quinn chat refresh bug, Jose found MCP custom conversions hallucination in Runneth, e2e tests failing overnight. |
 | 2026-04-06 (full) | ~120 | 18 | Full day re-scan with on: filter. MCP shipped to prod, evals passing, alpha orgs flagged in, Jose onboarding clients, LD gating design landed, Giselle moved evals meeting. |
 | 2026-04-06 | ~80 | 12 | Morning sync. New meeting cadence from Kyra, MCP GA goal, sales calls streaming MCP mentions, ES sync issues ongoing. |
 | 2026-04-02 | ~40 | 3 | Initial sync. Mostly engineering DI/v3 endpoint threads + MCP launch coordination. |
