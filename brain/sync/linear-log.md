@@ -3,7 +3,7 @@
 Tracks Vamsi's Linear ticket state. Team: PDEC. Updated by daily sync pipeline.
 
 ## Last Sync
-2026-04-06
+2026-04-07
 
 ## Active Issues (by status)
 
@@ -12,6 +12,8 @@ Tracks Vamsi's Linear ticket state. Team: PDEC. Updated by daily sync pipeline.
 |----|-------|---------|-----------|---------|
 | PDEC-5345 | Anthropic approval for official connector + plugin | Meta MCP Launch | Kyra | 2026-04-06 |
 | PDEC-5364 | Gate MCP access for off-market agencies via LD billing segment | Meta MCP Launch | Vamsi | 2026-04-06 |
+| PDEC-5377 | Server: migrate mcp flag to mcp-access string flag + org classification script | Meta MCP Launch | Vamsi | 2026-04-06 |
+| PDEC-5378 | Client: migrate to mcp-access flag + gated upgrade UI | Meta MCP Launch | Vamsi | 2026-04-06 |
 | PDEC-5361 | Define MCP eval framework + GR quality bar | Meta MCP Launch | Vamsi | 2026-04-06 |
 | PDEC-4634 | Add inline @ context picker and fix first-keypress trigger | Thought starters | Vamsi | 2026-03-11 |
 
@@ -42,7 +44,6 @@ Tracks Vamsi's Linear ticket state. Team: PDEC. Updated by daily sync pipeline.
 |----|-------|---------|----------|---------|
 | PDEC-5359 | Coordinate alpha rollout with Jose (6 customers) | Vamsi — MCP Ops | High | 2026-04-06 |
 | PDEC-5362 | Define Datadog MCP monitors for GR readiness | Meta MCP Launch | Medium | 2026-04-06 |
-| PDEC-5363 | Triage MCP payload bugs (insightGroups, spendState, customConversions) | Vamsi — MCP Ops | Medium | 2026-04-06 |
 | PDEC-4925 | Copilot links report context instead of creative context | — | — | 2026-03-19 |
 | PDEC-2426 | AI tag progress bar not showing | CA Glossary | Low | 2026-04-01 |
 | PDEC-3140 | Add Flex Ads to Ad Type filter options | — | Low | 2026-04-01 |
@@ -56,6 +57,9 @@ Tracks Vamsi's Linear ticket state. Team: PDEC. Updated by daily sync pipeline.
 | 2026-04-06 | PDEC-5144 | Unify MCP and MCP porto feature flags | In Staging | Done | No longer in active issues |
 | 2026-04-06 | PDEC-5132 | Add compact creative summary drill-in tool | In Staging | Done | No longer in active issues |
 | 2026-04-06 | PDEC-4973 | Add payload-shaping params to creative insights | In Staging | Done | No longer in active issues |
+| 2026-04-07 | PDEC-5377 | Server: migrate mcp flag to mcp-access string flag + org classification | — | In Progress | New. Sub-issue of PDEC-5364. Server-side gating work |
+| 2026-04-07 | PDEC-5378 | Client: migrate to mcp-access flag + gated upgrade UI | — | In Progress | New. Sub-issue of PDEC-5364. Client-side gating work |
+| 2026-04-07 | PDEC-5363 | Triage MCP payload bugs | Todo | Removed | No longer in active issues — likely completed or reassigned |
 | 2026-04-06 | PDEC-5345 | Anthropic approval for official connector + plugin | — | In Progress | New. Urgent. Created by Kyra |
 | 2026-04-06 | PDEC-5364 | Gate MCP access for off-market agencies via LD billing segment | — | In Progress | New. High. Agency access gating for GR |
 | 2026-04-06 | PDEC-5361 | Define MCP eval framework + GR quality bar | — | In Progress | New. High. Meeting w/ Giselle Tue 10:30am |
@@ -70,6 +74,7 @@ Tracks Vamsi's Linear ticket state. Team: PDEC. Updated by daily sync pipeline.
 
 | Date | Active Issues | Status Changes | Notes |
 |------|--------------|----------------|-------|
+| 2026-04-07 | 25 | 3 (2 new, 1 removed) | PDEC-5364 split into server (5377) + client (5378) sub-issues, both In Progress. PDEC-5363 no longer assigned. Anthropic submission review meeting tomorrow. |
 | 2026-04-06 (eve) | 24 | 11 (5 shipped, 6 new) | 5 MCP staging items shipped to Done. 6 new GR-track issues created today (3 In Progress, 3 Todo). Urgent: Anthropic approval. |
 | 2026-04-06 | 21 | 3 completed | 3 "In Progress" MCP tickets moved to Done on Apr 3. New high-pri admin request PDEC-5357 filed today (not assigned to Vamsi). |
 | 2026-04-02 | 20 | — | Initial sync |

@@ -3,12 +3,13 @@
 Tracks processed meetings to prevent reprocessing. Updated by daily sync pipeline.
 
 ## Last Sync
-2026-04-06
+2026-04-07
 
 ## Processed Meetings
 
 | Date | Meeting ID | Participants | Topics | Depth |
 |------|-----------|-------------|--------|-------|
+| 2026-04-06 | 4b164dcf-0657-465d-944d-c23cdaa353cd | Vamsi, Kyra | HVAC launch success, MCP gating progress, Anthropic approval form requirements, ChatGPT connector parity, onboarding improvements | Summary + chapters |
 | 2026-04-06 | da162b45-e17a-44f4-969d-6d72c176c0d9 | Vamsi, Kyra, Maya, Mike, Itay, Sam, Ali, PK, Rui | Ali ad comments edge cases, Rui async reports ES→Mongo, Itay stability PR, Mike MCP release + scaling + Datadog, Sam keyboard permissions + builder Roam, PK performance state filters, performance tagging alpha discussion | Summary + chapters |
 | 2026-04-06 | 5bfe2a93-66fb-436e-93b0-d8eac64845a2 | Vamsi, Kyra, Maya | Vamsi MCP Linear views + GR prioritization, Maya support volume reduction + MCP events + attribution window + partner share, aggressive SLA ticket closure (90%+ goal), stability project kickoffs | Summary + chapters |
 | 2026-04-03 | 0458fa55-b8e8-460f-9460-55068a0083e9 | Vamsi, Kyra | MCP full ownership shift to Vamsi, Maya → support, agency access gating, feature flags at billing level, eval methodology, engagement/travel plans, MCP GA as perf milestone | Summary + chapters |
