@@ -19,7 +19,7 @@ _Note: Channel IDs to be populated on next direct read._
 
 | Date | From | Channel/DM | Item | Status |
 |------|------|------------|------|--------|
-| 2026-04-07 | Mike | #project-cli | Group by ad + ad level data merging today — major GR unlock, was a non-negotiable for general release | done |
+| 2026-04-07 | Mike | #project-cli | All group-by dimensions now passing through MCP (ad, adset, campaign level). Mike merging today. Vamsi needs to test + verify we're retrieving full data across all levels | open |
 | 2026-04-07 | self | DM Kyra | Sent full MCP status update — alpha smooth, evals today, gating starting, Anthropic review Wed | done |
 | 2026-04-06 | Kyra | DM | Week goal: Get MCP to general release + keep Kyra proactively aware of progress/blockers | open |
 | 2026-04-06 | Kyra | DM | Week goal: Get MCP to general release + keep Kyra proactively aware of progress/blockers | open |
