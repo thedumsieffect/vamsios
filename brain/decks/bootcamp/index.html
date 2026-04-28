@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inspo MCP Testing Pack — Bootcamp Homework</title>
+  <style>
+    :root {
+      --bg: #0a0a0a;
+      --surface: #141414;
+      --border: #222;
+      --text: #e0e0e0;
+      --muted: #888;
+      --accent: #7c6bf0;
+      --accent-dim: #5a4cc2;
+      --green: #34d399;
+      --amber: #fbbf24;
+      --pink: #f472b6;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 2rem 1rem;
+    }
+
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 3rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    header h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 0.2rem 0.6rem;
+      border-radius: 100px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .badge-green { background: rgba(52, 211, 153, 0.15); color: var(--green); }
+    .badge-amber { background: rgba(251, 191, 36, 0.15); color: var(--amber); }
+    .badge-pink { background: rgba(244, 114, 182, 0.15); color: var(--pink); }
+    .badge-purple { background: rgba(124, 107, 240, 0.15); color: var(--accent); }
+
+    section {
+      margin-bottom: 2.5rem;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .section-header h2 {
+      font-size: 1.25rem;
+      font-weight: 600;
+    }
+
+    .framing {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .framing h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+    }
+
+    .signal-grid {
+      display: grid;
+      gap: 0.75rem;
+    }
+
+    .signal {
+      display: flex;
+      gap: 0.75rem;
+      align-items: baseline;
+    }
+
+    .signal strong {
+      color: var(--accent);
+      white-space: nowrap;
+    }
+
+    .signal span {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .exercise {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-bottom: 1rem;
+      transition: border-color 0.2s;
+    }
+
+    .exercise:hover {
+      border-color: var(--accent-dim);
+    }
+
+    .exercise-header {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .exercise-num {
+      width: 28px;
+      height: 28px;
+      background: var(--accent);
+      color: #fff;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .exercise-title {
+      font-weight: 600;
+      font-size: 1.05rem;
+    }
+
+    .prompt {
+      background: #1a1a2e;
+      border: 1px solid #252540;
+      border-radius: 8px;
+      padding: 1rem 1.25rem;
+      margin: 0.75rem 0;
+      font-size: 0.9rem;
+      line-height: 1.5;
+      color: #c4b5fd;
+      position: relative;
+      cursor: pointer;
+    }
+
+    .prompt::before {
+      content: 'PROMPT — click to copy';
+      display: block;
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 0.5rem;
+    }
+
+    .prompt.copied::before {
+      content: 'COPIED!';
+      color: var(--green);
+    }
+
+    .exercise-note {
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin-top: 0.5rem;
+    }
+
+    .automation-callout {
+      background: linear-gradient(135deg, rgba(124, 107, 240, 0.08), rgba(244, 114, 182, 0.08));
+      border: 1px solid rgba(124, 107, 240, 0.25);
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .automation-callout h3 {
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .automation-callout p {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .habit-list {
+      list-style: none;
+      padding: 0;
+      margin-top: 0.75rem;
+    }
+
+    .habit-list li {
+      padding: 0.4rem 0;
+      padding-left: 1.5rem;
+      position: relative;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .habit-list li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+    }
+
+    .tips {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem;
+    }
+
+    .tips h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+    }
+
+    .tips ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .tips li {
+      padding: 0.4rem 0;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .tips li strong {
+      color: var(--text);
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 0.8rem;
+    }
+
+    @media (max-width: 600px) {
+      body { padding: 1rem 0.75rem; }
+      header h1 { font-size: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Inspo MCP Testing Pack</h1>
+      <p>Bootcamp homework — prompts to paste directly into Claude with the MCP connected</p>
+    </header>
+
+    <div class="framing">
+      <h3>How to read competitor signals (no metrics available)</h3>
+      <div class="signal-grid">
+        <div class="signal">
+          <strong>Longevity (14+ days)</strong>
+          <span>Ads live past 14 days survived initial testing — they're being kept on intentionally</span>
+        </div>
+        <div class="signal">
+          <strong>Convergence</strong>
+          <span>When multiple brands lean into the same format, the industry is moving there</span>
+        </div>
+        <div class="signal">
+          <strong>Freshness</strong>
+          <span>High active/inactive ratio = a brand with conviction in their creative strategy</span>
+        </div>
+      </div>
+    </div>
+
+    <section>
+      <div class="section-header">
+        <h2>Quick Wins</h2>
+        <span class="badge badge-green">5-10 min</span>
+      </div>
+
+      <div class="exercise">
+        <div class="exercise-header">
+          <div class="exercise-num">1</div>
+          <div class="exercise-title">Brand Lookup & First Impressions</div>
+        </div>
+        <div class="prompt" onclick="copyPrompt(this)">Look up [brand] and give me a quick overview — what's their brand positioning, voice, and how many active ads are they running? What formats are they leaning into?</div>
+        <div class="exercise-note">Try with: Nike, Glossier, Athletic Greens, Hims, Liquid Death</div>
+      </div>
+
+      <div class="exercise">
+        <div class="exercise-header">
+          <div class="exercise-num">2</div>
+          <div class="exercise-title">What's [brand] doing?</div>
+        </div>
+        <div class="prompt" onclick="copyPrompt(this)">Pull active ads for [brand]. What are they running right now — how many ads, what formats, what's the messaging?</div>
+        <div class="exercise-note">The simplest possible prompt. See how fast you get a full competitive snapshot vs. manually browsing Ad Library.</div>
+      </div>
+
+      <div class="exercise">
+        <div class="exercise-header">
+          <div class="exercise-num">3</div>
+          <div class="exercise-title">Domain-Based Research</div>
+        </div>
+        <div class="prompt" onclick="copyPrompt(this)">I just saw an ad from a brand at [domain.com]. Who are they? What's their brand strategy and what other ads are they running?</div>
+        <div class="exercise-note">Real-world workflow — you spot an ad in the wild, now reverse-engineer the entire brand.</div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-header">
+        <h2>Core Exercises</h2>
+        <span class="badge badge-amber">15-30 min</span>
+      </div>
+
+      <div class="exercise">
+        <div class="exercise-header">
+          <div class="exercise-num">4</div>
+          <div class="exercise-title">Competitor Creative Audit</div>
+        </div>
+        <div class="prompt" onclick="copyPrompt(this)">Pull active ads for [brand A] and [brand B]. Compare their creative strategies — who's heavier on video vs. static? Who's launching more new creatives? What visual formats is each brand betting on?</div>
+        <div class="exercise-note">Pick two brands in the same vertical for the most interesting comparison.</div>
+      </div>
+
+      <div class="exercise">
+        <div class="exercise-header">
+          <div class="exercise-num">5</div>
+          <div class="exercise-title">Find What's Sticking</div>
+        </div>
+        <div class="prompt" onclick="copyPrompt(this)">Show me [brand]'s active ads that have been live for more than 14 days. What do they have in common — format, messaging, CTA? What's being kept on vs. what's new and still being tested?</div>
+        <div class="exercise-note">Ads that survive past the initial 14-day testing window are being kept on intentionally. Compare these against their newest launches to see what a brand is <em>proven on</em> vs. <em>experimenting with</em>.</div>
+      </div>
+
+      <div class="exercise">
+        <div class="exercise-header">
+          <div class="exercise-num">6</div>
+          <div class="exercise-title">Script Teardown</div>
+        </div>
+        <div class="prompt" onclick="copyPrompt(this)">Pull [brand]'s active video ads and get me the transcripts. What hook patterns are they using in the first 3 seconds? Are there common messaging themes across their scripts?</div>
+        <div class="exercise-note">The first 1-3 seconds of a video ad is the hook — the most critical element.</div>
+      </div>
+
+      <div class="exercise">
+        <div class="exercise-header">
+          <div class="exercise-num">7</div>
+          <div class="exercise-title">New Launch Radar</div>
+        </div>
+        <div class="prompt" onclick="copyPrompt(this)">What has [brand] launched in the last 7 days? Compare that to what they launched in the last 30 days. Are they testing new formats or doubling down on what's been running?</div>
+        <div class="exercise-note">Creative velocity tells you how aggressively a brand is testing.</div>
+      </div>
+
+      <div class="exercise">
+        <div class="exercise-header">
+          <div class="exercise-num">8</div>
+          <div class="exercise-title">Messaging Theme Extraction</div>
+        </div>
+        <div class="prompt" onclick="copyPrompt(this)">Get transcripts for the 5 longest-running video ads from [brand]. Extract: the hook (first 3 sec), the core claim, and the CTA. Present it as a messaging framework I can adapt.</div>
+        <div class="exercise-note">Turns competitor scripts into a reusable messaging playbook you can hand to a copywriter.</div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-header">
+        <h2>Deep Dives</h2>
+        <span class="badge badge-pink">30-60 min</span>
+      </div>
+
+      <div class="exercise">
+        <div class="exercise-header">
+          <div class="exercise-num">9</div>
+          <div class="exercise-title">Cross-Industry Format Mining</div>
+        </div>
+        <div class="prompt" onclick="copyPrompt(this)">I work in [industry A]. Pull active creatives from 5 top brands in [industry B] and [industry C] — industries adjacent to mine but not direct competitors. What formats and creative approaches are working there that haven't hit [industry A] yet? Give me 3 concepts I could adapt.</div>
+        <div class="exercise-note">The best whitespace isn't what your direct competitors are missing — it's what <em>other industries</em> have figured out that hasn't crossed over yet.</div>
+      </div>
+
+      <div class="exercise">
+        <div class="exercise-header">
+          <div class="exercise-num">10</div>
+          <div class="exercise-title">Competitive Brief</div>
+        </div>
+        <div class="prompt" onclick="copyPrompt(this)">I work for [brand A]. Pull our brand context and our top competitor [brand B]'s active creatives. Based on what they're testing that we're not, write me a creative brief for a net-new concept.</div>
+        <div class="exercise-note">The full strategist workflow — own brand context + competitor research = actionable brief.</div>
+      </div>
+
+      <div class="exercise">
+        <div class="exercise-header">
+          <div class="exercise-num">11</div>
+          <div class="exercise-title">Full Competitive Teardown (Boss Level)</div>
+        </div>
+        <div class="prompt" onclick="copyPrompt(this)">I'm pitching [prospect brand] tomorrow. Research them and their top 3 competitors. For each brand: brand positioning, active ad count, format mix, ads live 14+ days, and any video hook patterns. Then give me 3 creative recommendations for the pitch based on gaps you found.</div>
+        <div class="exercise-note">Everything chained together. Prep a pitch in 15 minutes instead of 3 hours.</div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-header">
+        <h2>Automation</h2>
+        <span class="badge badge-purple">Weekly</span>
+      </div>
+
+      <div class="automation-callout">
+        <h3>The power move — a living competitive radar</h3>
+        <p>Instead of manually checking competitors every week, set up Claude to do it for you and post a summary to Slack.</p>
+      </div>
+
+      <div class="exercise">
+        <div class="exercise-header">
+          <div class="exercise-num">12</div>
+          <div class="exercise-title">Weekly Competitor Scan</div>
+        </div>
+        <div class="prompt" onclick="copyPrompt(this)">I want to run a weekly competitor scan. Here are the brands I want to track: [brand A, brand B, brand C, brand D, brand E]. For each brand, check:
+
+1. New launches — what did they launch in the last 7 days?
+2. What's sticking — which ads crossed the 14-day mark this week? (newly proven)
+3. Gone dark — any previously active ads that are now inactive? (they killed it)
+4. Format shifts — is anyone changing their video/static/carousel mix?
+5. New hooks — pull transcripts for any new video ads and extract the hook (first 3 sec)
+
+Summarize it as a competitive intel brief I can share with my team.</div>
+        <div class="exercise-note">Run every Monday morning. Paste the output into a Slack channel and your entire team stays current.</div>
+      </div>
+
+      <ul class="habit-list">
+        <li>Pick 3-5 brands that matter most to your client</li>
+        <li>Run this prompt every Monday (or set a calendar reminder)</li>
+        <li>Save the output to a running doc so you can spot trends week over week</li>
+        <li>When a competitor makes a big move, that's your signal to brief the creative team</li>
+      </ul>
+
+      <div class="exercise" style="margin-top: 1rem;">
+        <div class="exercise-header">
+          <div class="exercise-num">+</div>
+          <div class="exercise-title">Bonus: Client Deliverable</div>
+        </div>
+        <div class="prompt" onclick="copyPrompt(this)">Take this week's competitor scan and write a 3-paragraph executive summary I can send to my client. Lead with the biggest move, highlight any format shifts, and end with one recommendation for what we should test next week based on what competitors are doing.</div>
+        <div class="exercise-note">Agencies charge for this. With the MCP, it takes 5 minutes.</div>
+      </div>
+    </section>
+
+    <div class="tips">
+      <h3>Tips for Best Results</h3>
+      <ul>
+        <li><strong>Be specific with brand names</strong> — "Nike" works better than "that shoe company"</li>
+        <li><strong>Ask follow-up questions</strong> — Claude remembers context. After pulling ads, ask "now compare the hooks" or "write me a brief based on this"</li>
+        <li><strong>Try your own clients</strong> — the exercises use placeholder brands, but the real value is running these against brands you're actually working on</li>
+        <li><strong>Chain exercises together</strong> — brand lookup (#1) → script teardown (#6) → competitive brief (#10) for the same brand is a complete research workflow</li>
+      </ul>
+    </div>
+
+    <footer>
+      Motion MCP Bootcamp — April 2026
+    </footer>
+  </div>
+
+  <script>
+    function copyPrompt(el) {
+      const text = el.textContent.replace('PROMPT — click to copy', '').replace('COPIED!', '').trim();
+      navigator.clipboard.writeText(text);
+      el.classList.add('copied');
+      setTimeout(() => el.classList.remove('copied'), 1500);
+    }
+  </script>
+</body>
+</html>

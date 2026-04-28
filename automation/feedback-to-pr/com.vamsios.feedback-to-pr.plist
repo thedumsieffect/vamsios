@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.vamsios.feedback-to-pr</string>
+
+    <key>ProgramArguments</key>
+    <array>
+        <string>/bin/bash</string>
+        <string>-lc</string>
+        <string>/Users/vamsi/Coding/vamsios/automation/feedback-to-pr/run.sh</string>
+    </array>
+
+    <!-- Run every 15 minutes during US business hours (9am-7pm CT, Mon-Fri).
+         Adjust StartCalendarInterval entries below if you want a different cadence. -->
+    <key>StartCalendarInterval</key>
+    <array>
+        <dict>
+            <key>Minute</key>
+            <integer>0</integer>
+        </dict>
+        <dict>
+            <key>Minute</key>
+            <integer>15</integer>
+        </dict>
+        <dict>
+            <key>Minute</key>
+            <integer>30</integer>
+        </dict>
+        <dict>
+            <key>Minute</key>
+            <integer>45</integer>
+        </dict>
+    </array>
+
+    <key>StandardOutPath</key>
+    <string>/Users/vamsi/Coding/vamsios/automation/feedback-to-pr/state/last-run.log</string>
+
+    <key>StandardErrorPath</key>
+    <string>/Users/vamsi/Coding/vamsios/automation/feedback-to-pr/state/last-run.err.log</string>
+
+    <key>RunAtLoad</key>
+    <false/>
+</dict>
+</plist>

@@ -1,0 +1,21 @@
+.DS_Store
+
+# here-now transient state
+.herenow/
+
+# Log files
+*.log
+
+# Local env files
+.env
+.env.local
+
+# Per-automation state
+automation/*/state/
+automation/*/node_modules/
+
+# Empty / mirror dirs from other repos
+docs/.agents/eval-results/
+
+# Personal artifacts (per user direction)
+resume/

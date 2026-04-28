@@ -9,7 +9,6 @@ macOS `launchd` is how we run automated tasks on Vamsi's machine. Each job has:
 | Job | Label | Frequency | Script | Purpose |
 |-----|-------|-----------|--------|---------|
 | Bootcamp Moderator | `com.motion.bootcamp-moderator` | Every 60 min | `~/Coding/Community Management/sweep.py` | Scans Slack channels for moderation issues, posts reports to #moderators |
-| Daily Brain Sync | `com.vamsi.daily-brain-sync` | Daily at 7pm | `~/Coding/vamsios/automation/daily-sync/run.sh` | Pulls Roam meetings + Slack action items/decisions into brain/sync/ via claude CLI |
 
 ## How It Works
 
